@@ -1,0 +1,12 @@
+Failed to build PureLive models.
+e:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\App_Data\Models\all.generated.cs(266): error CS1061: 'string' does not contain a definition for 'GetPageTitle' and no extension method 'GetPageTitle' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+
+   bij System.Web.Compilation.AssemblyBuilder.Compile()
+   bij System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   bij System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   bij System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   bij System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   bij System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   bij System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   bij Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GetModelsAssembly(Boolean forceRebuild) in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:regel 300
+   bij Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.EnsureModels() in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:regel 152

@@ -1,0 +1,10 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+}
+
+@Html.Partial("Home/slider")
+	
+<div>
+	@CurrentPage.GetGridHtml("bodyText")
+</div>

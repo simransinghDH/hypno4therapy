@@ -1,0 +1,89 @@
+﻿@inherits UmbracoTemplatePage
+@{
+	Layout = null;
+    string siteName = CurrentPage.Site().siteName;
+    var contactPage = CurrentPage.Site().FirstChild("contactPage");
+    string homePageUrl = CurrentPage.Site().Url;
+}
+
+<!doctype html>
+<html>
+	<head>
+		<title>@Umbraco.Field("title") | @siteName</title>
+		<meta charset="utf-8">
+	    <meta name="description" content="@Umbraco.Field("metaDescription")" />
+	    <meta name="keywords" content="@Umbraco.Field("metaKeywords")" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="~/css/carousel.css" />
+		<link rel="stylesheet" href="~/css/magnific-popup-lightbox.css" />
+		<link rel="stylesheet" href="~/css/site.css" />
+		<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/scripts/magnific-popup-lightbox.js"></script>
+	</head>
+	<body>
+		<!-- Nav -->
+		<nav class="navbar">
+			<div class="container">
+				<a href="/" class="navbar-brand">
+					<img alt="Umbraco" src="/images/umbracoblack.png">
+				</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<!-- Navbar -->
+					<ul class="nav navbar-nav">
+						@{ var selection = CurrentPage.Site().Children.Where("Visible"); }
+						@foreach (var item in selection)
+						{
+							<li class="@(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+								<a href="@item.Url">@item.Name</a>
+							</li>
+						}
+					</ul>
+					<!-- End Navbar -->
+				</div>
+			</div> 
+		</nav>
+		<!-- End Nav -->
+		
+		<!-- Child template begins -->
+		@RenderBody()
+		<!-- Child template ends -->
+        <footer>
+            <div class="container">
+                <section>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            @if (contactPage != null)
+                            {
+                                <address>
+                                    <strong>@siteName</strong><br />
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span><span itemprop="streetAddress">  @contactPage.streetAndNumber</span><br>
+                                    <span class="city-address"><span itemprop="addressLocality">  @contactPage.city</span>, <span itemprop="postalCode">@contactPage.postalCode</span></span><br>
+                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><span itemprop="telephone">  @contactPage.telephoneNumber</span><br>
+                                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:@(contactPage.mailAddress)" itemprop="email">  @contactPage.mailAddress</a><br>
+                                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><a href="@homePageUrl" itemprop="url">  hypno4therapy.be</a><br>
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="@contactPage.facebookPage" target="_blank">  Hypno4Therapy @@ Facebook</a>
+                                </address>
+                            }
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    &copy; @(DateTime.Now.Year) @siteName - @Umbraco.Field("#Site.RechtenVoorbehouden")
+                </section>
+            </div>
+        </footer>
+	</body>
+</html>

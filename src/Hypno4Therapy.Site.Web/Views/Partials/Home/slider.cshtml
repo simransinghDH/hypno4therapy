@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+	var selection = CurrentPage.FirstChild("carrouselFolder").Children("carrouselSlide").Where("Visible");	
+}
+
+<!-- promo slider html -->
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+		@foreach (var item in selection) 
+		{
+			<div class="item @item.IsFirst("active")" style="background-image:url('@item.GetCropUrl("image", "promoHome")');">
+                <div class="carousel-caption">
+					<h3>@item.Name</h3>
+					<p>@item.Description</p>
+					@if (item.HasValue("link"))
+					{
+					    <p><a class="btn btn-info" href="@Umbraco.Content(item.Link).Url" role="button">Meer info</a></p>
+					}
+                </div>
+            </div>
+		}
+    </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>
+<!-- end promo slider html -->
