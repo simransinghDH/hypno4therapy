@@ -23,6 +23,7 @@ E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\controls.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\CookComputing.XmlRpcV2.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\Examine.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\HtmlAgilityPack.dll
+E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\Hypno4Therapy.Site.Core.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\ICSharpCode.SharpZipLib.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\ImageProcessor.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\ImageProcessor.Web.dll
@@ -73,6 +74,7 @@ E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\umbraco.prov
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\Umbraco.Web.UI.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\UmbracoExamine.dll
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\UrlRewritingNet.UrlRewriter.dll
+E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\Hypno4Therapy.Site.Core.pdb
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\AutoMapper.pdb
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\AutoMapper.xml
 E:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\bin\AutoMapper.Net4.pdb

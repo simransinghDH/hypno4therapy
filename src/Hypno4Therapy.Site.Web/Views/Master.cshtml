@@ -1,9 +1,14 @@
 ﻿@inherits UmbracoTemplatePage
 @{
-	Layout = null;
+    Layout = null;
     string siteName = CurrentPage.Site().siteName;
     var contactPage = CurrentPage.Site().FirstChild("contactPage");
     string homePageUrl = CurrentPage.Site().Url;
+    var selection = CurrentPage.Site().Children.Where("Visible");
+    var headerLogoId = Umbraco.Media(CurrentPage.Site().logoHeader);
+    string headerLogoUrl = headerLogoId.Url;
+    var footerLogoId = Umbraco.Media(CurrentPage.Site().logoFooter);
+    string footerLogoUrl = footerLogoId.Url;
 }
 
 <!doctype html>
@@ -14,20 +19,20 @@
 	    <meta name="description" content="@Umbraco.Field("metaDescription")" />
 	    <meta name="keywords" content="@Umbraco.Field("metaKeywords")" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 		<link rel="stylesheet" href="~/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="~/css/carousel.css" />
-		<link rel="stylesheet" href="~/css/magnific-popup-lightbox.css" />
 		<link rel="stylesheet" href="~/css/site.css" />
-		<script type="text/javascript" src="/scripts/jquery.min.js"></script>
-		<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/scripts/magnific-popup-lightbox.js"></script>
 	</head>
 	<body>
 		<!-- Nav -->
 		<nav class="navbar">
 			<div class="container">
 				<a href="/" class="navbar-brand">
-					<img alt="Umbraco" src="/images/umbracoblack.png">
+					<img alt="Umbraco" src="@headerLogoUrl">
+                    <span class="navbar-sitename">@siteName</span>
 				</a>
 				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 					<span class="icon-bar"></span>
@@ -36,8 +41,7 @@
 				</button>
 				<div class="collapse navbar-collapse navHeaderCollapse">
 					<!-- Navbar -->
-					<ul class="nav navbar-nav">
-						@{ var selection = CurrentPage.Site().Children.Where("Visible"); }
+					<ul class="nav navbar-nav navbar-right">
 						@foreach (var item in selection)
 						{
 							<li class="@(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
@@ -58,32 +62,47 @@
             <div class="container">
                 <section>
                     <div class="row">
-                        <div class="col-md-4 col-xs-12">
+                        <div class="col-sm-4">
+                            <h2>@siteName</h2>
                             @if (contactPage != null)
                             {
                                 <address>
-                                    <strong>@siteName</strong><br />
                                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span><span itemprop="streetAddress">  @contactPage.streetAndNumber</span><br>
-                                    <span class="city-address"><span itemprop="addressLocality">  @contactPage.city</span>, <span itemprop="postalCode">@contactPage.postalCode</span></span><br>
-                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><span itemprop="telephone">  @contactPage.telephoneNumber</span><br>
+                                    <span class="city-address"><span itemprop="postalCode">  @contactPage.postalCode </span><span itemprop="addressLocality">@contactPage.city</span></span><br>
+                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><span itemprop="telephone"><a href="tel:@contactPage.telephoneNumber.Replace(" ", string.Empty)">  @contactPage.telephoneNumber</a></span><br>
                                     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:@(contactPage.mailAddress)" itemprop="email">  @contactPage.mailAddress</a><br>
                                     <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><a href="@homePageUrl" itemprop="url">  hypno4therapy.be</a><br>
-                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="@contactPage.facebookPage" target="_blank">  Hypno4Therapy @@ Facebook</a>
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="@contactPage.facebookPage" target="_blank">  @Umbraco.Field(DictionaryKeys.VisitUsFacebook)</a>
                                 </address>
                             }
                         </div>
-                        <div class="col-md-4 col-xs-12">
-
+                        <div class="col-sm-4 text-right">
+                            <h2>@Umbraco.Field("#Site.Footer.SitemapTitel")</h2>
+                            <ul class="list-unstyled">
+                                @foreach (var item in selection)
+                                {
+                                    <li>
+                                        <a href="@item.Url">@item.Name</a>
+                                    </li>
+                                }
+                            </ul>
                         </div>
-                        <div class="col-md-4 col-xs-12">
-
+                        <div class="col-sm-4 text-right footer-logo">
+                            <img src="@footerLogoUrl" alt="Hypno4therapy logo" width="160"/>
                         </div>
                     </div>
                 </section>
-                <section>
-                    &copy; @(DateTime.Now.Year) @siteName - @Umbraco.Field("#Site.RechtenVoorbehouden")
-                </section>
+               
             </div>
         </footer>
+        <section id="copyright">
+            <div class="container">
+                <div class="text-center">&copy; @(DateTime.Now.Year) @siteName - @Umbraco.Field(DictionaryKeys.AllRightsReserved)</div>
+            </div>
+        </section>
+        <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+
+        @RenderSection("scripts", false)
 	</body>
 </html>

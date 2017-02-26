@@ -1,10 +1,37 @@
 ﻿@inherits UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
+
+    string leadbannerLinkUrl = string.Empty;
+    var leadbannerLink = Umbraco.Content(CurrentPage.leadbannerLink);
+    string bannerUrl = CurrentPage.GetCropUrl("leadbannerImage", "Lead banner afbeelding crop");
+    if (leadbannerLink != null)
+    {
+        leadbannerLinkUrl = leadbannerLink.Url;
+    }
 }
 
-@Html.Partial("Home/slider")
+<section class="lead-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Umbraco.Field("#Site.Leadbanner.Titel")</h1>
+                <a href="@leadbannerLinkUrl" class="btn btn-leadbanner btn-lg text-uppercase" role="button">@Umbraco.Field("#Site.Leadbanner.Link")</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="arrow"></section>
 	
 <div>
 	@CurrentPage.GetGridHtml("bodyText")
 </div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            $(".lead-banner").css("background-image", "url(@Html.Raw(bannerUrl)");
+        };
+    </script>
+}

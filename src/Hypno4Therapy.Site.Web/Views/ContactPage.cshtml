@@ -1,5 +1,41 @@
 ﻿@inherits UmbracoTemplatePage
-@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using Hypno4Therapy.Site.Web.Models.Forms
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
+    string isSuccess = Request["succes"];
 }
+
+@if (!string.IsNullOrEmpty(Umbraco.Field("pageTitle").ToString()))
+{
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">@Umbraco.Field("pageTitle")</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<section class="contact-form">
+    <div class="container">
+        <div class="col-md-5">
+            @Umbraco.Field("bodyText")
+        </div>
+        <div class="col-md-7">
+            @if (!string.IsNullOrEmpty(isSuccess) && isSuccess.Equals("true"))
+            {
+                <p>@Umbraco.Field("#Site.Contact.Succes")</p>
+            }
+            else
+            {
+                Html.RenderPartial("~/Views/Partials/Forms/ContactForm.cshtml", new ContactFormModel());
+            }
+        </div>
+    </div>
+</section>
+
+<section class="google-maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9993.619103355937!2d3.2255827!3d51.2300398!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3573b1ff26b8b%3A0xafaad672a99aa039!2sDudzeelse+Steenweg+156%2C+8000+Brugge!5e0!3m2!1snl!2sbe!4v1487380593646" width="1600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>

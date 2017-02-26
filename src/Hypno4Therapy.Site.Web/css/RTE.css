@@ -5,3 +5,14 @@ body.mceContentBody, body.mce-content-body {
 	font-size: 14px;
 	color: #898989;
     }
+
+
+
+
+
+
+/**umb_name:Middelgrote tekst*/
+.MiddelgroteTekst{font-size: 175%}
+
+/**umb_name:Grote tekst*/
+.GroteTekst{font-size: 250%}

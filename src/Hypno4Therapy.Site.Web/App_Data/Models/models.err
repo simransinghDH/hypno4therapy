@@ -1,5 +1,5 @@
 Failed to build PureLive models.
-e:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\App_Data\Models\all.generated.cs(266): error CS1061: 'string' does not contain a definition for 'GetPageTitle' and no extension method 'GetPageTitle' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+e:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\App_Data\Models\all.generated.cs(302): error CS1061: 'string' does not contain a definition for 'GetPageTitle' and no extension method 'GetPageTitle' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
 
    bij System.Web.Compilation.AssemblyBuilder.Compile()
    bij System.Web.Compilation.BuildProvidersCompiler.PerformBuild()

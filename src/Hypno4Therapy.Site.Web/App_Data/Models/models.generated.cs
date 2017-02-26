@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "85101e77e8a2a727")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4bee06d1ae5d9418")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -59,7 +59,43 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Site naam
+		/// Leadbanner afbeelding: De hoogte van de afbeelding moet 720 pixels zijn om een goede visualisatie te verzekeren
+		///</summary>
+		[ImplementPropertyType("leadbannerImage")]
+		public Umbraco.Web.Models.ImageCropDataSet LeadbannerImage
+		{
+			get { return this.GetPropertyValue<Umbraco.Web.Models.ImageCropDataSet>("leadbannerImage"); }
+		}
+
+		///<summary>
+		/// Leadbanner link
+		///</summary>
+		[ImplementPropertyType("leadbannerLink")]
+		public object LeadbannerLink
+		{
+			get { return this.GetPropertyValue("leadbannerLink"); }
+		}
+
+		///<summary>
+		/// Logo footer: Het logo van de footer is van een groter formaat. Idealiter 160 x 170 px
+		///</summary>
+		[ImplementPropertyType("logoFooter")]
+		public string LogoFooter
+		{
+			get { return this.GetPropertyValue<string>("logoFooter"); }
+		}
+
+		///<summary>
+		/// Logo header: Het logo van de header is een klein formaat. Idealiter van 52 x 57 px
+		///</summary>
+		[ImplementPropertyType("logoHeader")]
+		public string LogoHeader
+		{
+			get { return this.GetPropertyValue<string>("logoHeader"); }
+		}
+
+		///<summary>
+		/// Site naam: Naam van de website. Dit komt voor in de footer en op andere plaatsen.
 		///</summary>
 		[ImplementPropertyType("siteName")]
 		public string SiteName
@@ -320,6 +356,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContactPage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Inhoud
+		///</summary>
+		[ImplementPropertyType("bodyText")]
+		public IHtmlString BodyText
+		{
+			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
 		}
 
 		///<summary>

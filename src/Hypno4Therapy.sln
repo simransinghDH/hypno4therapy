@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypno4Therapy.Site.Web", "Hypno4Therapy.Site.Web\Hypno4Therapy.Site.Web.csproj", "{2F1D98B4-BA63-4882-ADC5-872C6FE74361}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED} = {F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypno4Therapy.Site.Core", "Hypno4Therapy.Site.Core\Hypno4Therapy.Site.Core.csproj", "{F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{2F1D98B4-BA63-4882-ADC5-872C6FE74361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1D98B4-BA63-4882-ADC5-872C6FE74361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F1D98B4-BA63-4882-ADC5-872C6FE74361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35DD0B3-6DB4-4BCD-B1C5-CDBA34A8E4ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

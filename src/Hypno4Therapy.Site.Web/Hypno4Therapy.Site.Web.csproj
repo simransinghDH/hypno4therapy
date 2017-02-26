@@ -305,8 +305,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\carousel.css" />
+    <Content Include="css\magnific-popup-lightbox.css" />
+    <Content Include="css\RTE.css" />
     <Content Include="css\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\arrow-home.png" />
+    <Content Include="Images\lead-banner.jpg" />
+    <Content Include="Images\preview_large.png" />
+    <Content Include="Images\preview_medium.png" />
+    <Content Include="Images\preview_small.png" />
     <Content Include="packages.config" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
@@ -330,7 +338,9 @@
     <Content Include="config\UrlRewriting.config" />
     <Content Include="config\umbracoSettings.config" />
     <Content Include="config\trees.config" />
-    <Content Include="config\tinyMceConfig.config" />
+    <Content Include="config\tinyMceConfig.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="config\scripting.config" />
     <Content Include="config\metablogConfig.config" />
     <Content Include="config\log4net.config" />
@@ -353,6 +363,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Partials\Home\slider.cshtml" />
+    <Content Include="Views\Partials\Forms\ContactForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -388,6 +399,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\FormController.cs" />
+    <Compile Include="Models\Forms\ContactFormModel.cs" />
+    <Compile Include="Models\Mails\IMailProcessor.cs" />
+    <Compile Include="Models\Mails\MailProcessor.cs" />
+    <Compile Include="Mvc\Attributes\UmbracoDisplayAttribute.cs" />
+    <Compile Include="Mvc\Attributes\UmbracoRequiredAttribute.cs" />
+    <Compile Include="Mvc\Attributes\UmbracoValidationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -395,7 +413,14 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Form\" />
     <Folder Include="Views\MacroPartials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hypno4Therapy.Site.Core\Hypno4Therapy.Site.Core.csproj">
+      <Project>{f35dd0b3-6db4-4bcd-b1c5-cdba34a8e4ed}</Project>
+      <Name>Hypno4Therapy.Site.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

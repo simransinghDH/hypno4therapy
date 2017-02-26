@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Hypno4Therapy.Site.Web.Models.Forms.ContactFormModel>
+
+@using (Html.BeginUmbracoForm("Contact", "Form"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Telephone)
+        @Html.TextBoxFor(model => model.Telephone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Telephone)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Message)
+        @Html.TextAreaFor(model => model.Message, new { @class = "form-control contactform-message-input" })
+    </div>
+
+    <div class="form-group text-right">
+        <button type="submit" class="btn btn-lg btn-leadbanner text-uppercase">@Umbraco.Field("#Site.Contact.Verstuur")</button>
+    </div>
+}
