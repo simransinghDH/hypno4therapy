@@ -309,12 +309,10 @@
     <Content Include="css\magnific-popup-lightbox.css" />
     <Content Include="css\RTE.css" />
     <Content Include="css\site.css" />
+    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Images\arrow-home.png" />
+    <Content Include="Images\arrow-home2.png" />
     <Content Include="Images\lead-banner.jpg" />
-    <Content Include="Images\preview_large.png" />
-    <Content Include="Images\preview_medium.png" />
-    <Content Include="Images\preview_small.png" />
     <Content Include="packages.config" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
