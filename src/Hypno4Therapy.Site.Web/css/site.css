@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5 {
 }
 
 body {
-    background-color: #80b0a9;
+    background-color: #5ba3d4;
     font-family: Dosis,sans-serif;
     font-size: 20px;
     line-height: 1.6em;
@@ -64,7 +64,7 @@ footer .row div:nth-child(2){
 }
 
 .arrow {
-    background: url(../../Images/arrow-home.png) center no-repeat;
+    background: url(../../Images/arrow-home2.png) center no-repeat;
     min-height: 50px;
     margin-top: -50px;
     bottom: -1px;
@@ -95,7 +95,7 @@ address {
 }
 
 .footer-logo {
-    padding-top: 55px;
+    padding-top: 40px;
 }
 
 .umb-grid .grid-section .White, .umb-grid .grid-section .Grey, .umb-grid .grid-section .Blue {
@@ -112,7 +112,7 @@ address {
 }
 
 .contact-form .btn-leadbanner {
-    background-color: #80b0a9;
+    background-color: #5ba3d4;
 }
 
 .contact-form {
@@ -171,7 +171,7 @@ address {
 }
 
 .page-title, .key-content {
-    background-color: #5C4B3C;
+    background-color: #876E58;
 }
 
 .key-content {
