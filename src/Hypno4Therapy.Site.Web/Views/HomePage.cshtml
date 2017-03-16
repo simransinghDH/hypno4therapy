@@ -4,7 +4,8 @@
 
     string leadbannerLinkUrl = string.Empty;
     var leadbannerLink = Umbraco.Content(CurrentPage.leadbannerLink);
-    string bannerUrl = CurrentPage.GetCropUrl("leadbannerImage", "Lead banner afbeelding crop");
+    string bannerDesktopUrl = CurrentPage.GetCropUrl("leadbannerImage", "Lead banner desktop crop");
+    string bannerMobileUrl = CurrentPage.GetCropUrl("leadbannerImage", "Lead banner mobile crop");
     if (leadbannerLink != null)
     {
         leadbannerLinkUrl = leadbannerLink.Url;
@@ -27,11 +28,17 @@
 	@CurrentPage.GetGridHtml("bodyText")
 </div>
 
-@section scripts
+@section stylesheets
 {
-    <script type="text/javascript">
-        window.onload = function () {
-            $(".lead-banner").css("background-image", "url(@Html.Raw(bannerUrl)");
-        };
-    </script>
+<style>
+    section.lead-banner {
+        background-image: url('@Html.Raw(bannerDesktopUrl)');
+    }
+
+    @@media screen and (max-width:800px) {
+        section.lead-banner {
+            background-image: url('@Html.Raw(bannerMobileUrl)');
+        }
+    }
+</style>
 }
