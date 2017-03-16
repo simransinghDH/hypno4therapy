@@ -1,33 +1,95 @@
- 2017-02-26 23:55:33,506 [P13404/D3/T59] INFO  Umbraco.Core.MainDom - Stopping...
- 2017-02-26 23:55:33,508 [P13404/D3/T59] INFO  Umbraco.Core.MainDom - Released MainDom.
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
- 2017-02-26 23:55:33,510 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
- 2017-02-26 23:55:33,512 [P13404/D3/T62] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
- 2017-02-26 23:55:33,512 [P13404/D3/T43] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
- 2017-02-26 23:55:33,512 [P13404/D3/T54] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
- 2017-02-26 23:55:33,512 [P13404/D3/T61] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
- 2017-02-26 23:55:33,582 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
- 2017-02-26 23:55:33,582 [P13404/D3/T59] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
- 2017-02-26 23:55:33,583 [P13404/D3/T10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
- 2017-02-26 23:56:03,679 [P13404/D3/T59] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+﻿ 2017-02-27 00:00:46,572 [P13404/D4/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.9 application starting on SIMRANPC
+ 2017-02-27 00:00:46,593 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-02-27 00:00:46,604 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 10ms)
+ 2017-02-27 00:00:46,662 [P13404/D4/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-02-27 00:00:46,662 [P13404/D4/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-02-27 00:00:46,678 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-02-27 00:00:46,696 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 17ms)
+ 2017-02-27 00:00:46,738 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-02-27 00:00:46,739 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-02-27 00:00:46,739 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-02-27 00:00:46,741 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-02-27 00:00:46,751 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-02-27 00:00:46,755 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 4ms)
+ 2017-02-27 00:00:46,755 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-02-27 00:00:46,761 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2017-02-27 00:00:46,804 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-02-27 00:00:46,805 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-02-27 00:00:46,806 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-02-27 00:00:46,807 [P13404/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 1ms)
+ 2017-02-27 00:00:47,901 [P13404/D4/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-02-27 00:00:48,077 [P13404/D4/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-02-27 00:00:48,093 [P13404/D4/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-02-27 00:00:48,176 [P13404/D4/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-02-27 00:00:48,246 [P13404/D4/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1756ms)
+ 2017-02-27 00:00:48,548 [P13404/D4/T83] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://hypno4therapy.local:80/umbraco (UmbracoModule request)
+ 2017-02-27 00:00:48,809 [P13404/D4/T83] INFO  umbraco.content - Load Xml from file...
+ 2017-02-27 00:00:48,810 [P13404/D4/T83] INFO  umbraco.content - Loaded Xml from file.
+ 2017-02-27 00:00:49,288 [P13404/D4/T80] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-02-27 00:00:49,289 [P13404/D4/T80] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-02-27 00:00:51,104 [P13404/D4/T80] ERROR Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Failed to build models.
+System.Web.HttpCompileException (0x80004005): e:\Documenten\CodeRepo\Hypno4Therapy\src\Hypno4Therapy.Site.Web\App_Data\Models\all.generated.cs(302): error CS1061: 'string' does not contain a definition for 'GetPageTitle' and no extension method 'GetPageTitle' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+   bij System.Web.Compilation.AssemblyBuilder.Compile()
+   bij System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   bij System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   bij System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   bij System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   bij System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   bij System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   bij Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GetModelsAssembly(Boolean forceRebuild) in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:regel 300
+   bij Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.EnsureModels() in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:regel 152
+ 2017-02-27 00:00:51,105 [P13404/D4/T80] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Running without models.
+ 2017-02-27 00:01:48,882 [P13404/D4/T86] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-02-26 00:01:48
+ 2017-02-27 00:01:48,937 [P13404/D4/T78] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-02-27 00:01:48,938 [P13404/D4/T78] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 0ms)
+ 2017-02-27 00:09:01,191 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-02-27 00:09:01,191 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-02-27 00:09:01,193 [P13404/D4/T87] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-02-27 00:09:01,265 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-02-27 00:09:01,265 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-02-27 00:09:01,265 [P13404/D4/T48] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-02-27 00:09:01,267 [P13404/D4/T64] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-02-27 00:09:01,269 [P13404/D4/T64] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-02-27 00:09:01,269 [P13404/D4/T67] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-02-27 00:09:01,269 [P13404/D4/T67] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-02-27 00:09:01,269 [P13404/D4/T85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-02-27 00:09:31,349 [P13404/D4/T77] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
 
 _shutDownMessage=Change in App_Offline.htm
 HostingEnvironment initiated shutdown
 Change in App_Offline.htm
 Change in App_Offline.htm
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
 Change in App_Offline.htm
 Change in App_Offline.htm
 Change in App_Offline.htm
-Change in App_Offline.htm
-Change in App_Offline.htm
-Change in App_Offline.htm
-Change in App_Offline.htm
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
 HostingEnvironment caused shutdown
 
 _shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
