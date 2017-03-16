@@ -66,7 +66,7 @@ footer .row div:nth-child(2){
 .arrow {
     background: url(../../Images/arrow-home2.png) center no-repeat;
     min-height: 50px;
-    margin-top: -50px;
+    margin-top: -48px;
     bottom: -1px;
 }
 
